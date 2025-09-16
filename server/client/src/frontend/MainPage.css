@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Mainpage.css */
+
+:root {
+  --primary-font: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --primary-color: #0C233C;
+  --secondary-color: #00338D;
+  --accent-color: #E30276;
+  --bg-color: #f9f9fb;
+}
+
+* {
+  font-family: var(--primary-font);
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-size: 15px;
+  color: var(--primary-color);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.navbar, .sidebar, .card, .table, .form-select {
+  font-family: var(--primary-font);
+}
+h1, h2 {
+  letter-spacing: 0.5px;
+}
+body {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: subtle navbar blur/shadow effect */
+.navbar-shadow {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/*end of font style setting */
+
+
+/* React Select */
+/* === Custom React-Select Styles === */
+
+.react-select__control {
+  border-radius: 12px;
+  border-color: #d9d9d9;
+  box-shadow: none;
+  min-height: 40px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.react-select__control:hover {
+  border-color: #220486;
+}
+
+.react-select__control--is-focused {
+  border-color: #00338D;
+  box-shadow: 0 0 0 2px rgba(0, 51, 141, 0.2);
+}
+
+.react-select__menu {
+  border-radius: 12px;
+  z-index: 9999;
+  font-size: 14px;
+}
+
+.react-select__option {
+  padding: 10px 16px;
+  color: #00338D;
+  background-color: white;
+  transition: background-color 0.2s ease;
+}
+
+.react-select__option:hover {
+  background-color: rgba(0, 51, 141, 0.1);
+}
+
+.react-select__option--is-selected {
+  background-color: #00338D;
+  color: white;
+  font-weight: 600;
+}
+
+.react-select__placeholder {
+  color: #999;
+}
+
+.react-select__single-value {
+  color: #0C233C;
+}
+
+/* Optional: rounded input arrow and spacing */
+.react-select__indicators {
+  color: #00338D;
+}
+
+.react-select__indicator-separator {
+  display: none;
+}
+/* end of react select*/
+
+/* Sidebar */
+.sidebar {
+  background-color: #f9f9fb;
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.08);
+  transition: width 0.3s ease;
+}
+
+.sidebar .nav-link {
+  color: #00338D;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.sidebar .nav-link:hover {
+  background-color: rgba(0, 51, 141, 0.08);
+}
+
+.sidebar .nav-link.active-section {
+  background-color: rgba(0, 51, 141, 0.1);
+  font-weight: 600;
+}
+
+.sidebar .nav-link .icon {
+  margin-right: 8px;
+}
+
+
+/* === Native <select> Styling === */
+/* === Override Bootstrap .form-select === */
+
+.form-select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+
+  background-color: #ffffff !important;
+  border: 1.5px solid #d9d9d9 !important;
+  padding: 8px 12px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  color: #0C233C !important;
+  font-family: 'Inter', sans-serif !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D'%2300338D'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%20width%3D'24'%20xmlns%3D'http://www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M7%2010l5%205%205-5z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 16px 16px !important;
+}
+
+.form-select:hover {
+  border-color: #220486 !important;
+}
+
+.form-select:focus {
+  border-color: #3860a5 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(0, 51, 141, 0.15) !important;
+}
+
+.form-select:disabled {
+  background-color: #f2f2f2 !important;
+  color: #999 !important;
+  cursor: not-allowed !important;
+}
+
+/*end of sidebar*/
+
+
+.loading-dots {
+  display: inline-flex;
+  align-items: center;
+}
+
+.loading-dots .dot {
+  animation: blink 1.5s infinite steps(1, start);
+  font-weight: bold;
+}
+
+.loading-dots .dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-dots .dot:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.loading-dots .dot:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes blink {
+
+  0%,
+  20% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.collapsed .nav-link {
+  justify-content: center;
+}
+
+.collapsed .nav-link span {
+  display: none;
+}
+
+/* DataTableStyles.css */
+
+/* Style for the table itself */
+.data-table {
+  width: 100%;
+  /* margin: 0 auto; */
+  border-radius: 8px;
+  overflow: hidden; /* Ensures content does not spill out */
+  padding: 10px;
+}
+
+/* Style for the table header */
+.data-table thead th {
+  font-weight: 600;
+  text-align: left; /* Align header text to the left */
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 1px solid #d1d1d1; /* Small grey border under the header */
+}
+
+/* Style for table body */
+.data-table tbody td {
+  padding: 12px 16px;
+  text-align: left; /* Align body cells to the left */
+  border-bottom: 1px solid #d1d1d1; /* Small grey border for each row */
+  vertical-align: middle;
+}
+
+/* Optional: Ensure table cells fit the card */
+.data-table tbody {
+  max-height: calc(100vh - 300px); /* Adjust according to your layout */
+  overflow-y: auto; /* Add scroll if needed */
+}
+
+/* DataTable custom styles - Wrapped version */
+.data-table-wrapped {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table-wrapped thead tr {
+  background-color: #f8f9fa;
+}
+
+.data-table-wrapped th {
+  font-weight: 600;
+  text-align: left;
+  padding: 16px;
+  border-bottom: 2px solid #d1d1d1;
+  white-space: nowrap; /* Prevent header wrapping (optional) */
+}
+
+.data-table-wrapped td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #d1d1d1;
+  white-space: normal; /* Allow text wrapping */
+  word-break: break-word; /* Break long words */
+}
+
+/* modal */
+.modal {
+  /* margin-left: 300px; */
+  /* margin-top: 100px; */
+  padding-top: 100px;
+}
+
+.custom-file-input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-file-input {
+  display: none; /* Hide the default file input */
+}
+
+.custom-file-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #b0b9c2; /* Blue background */
+  color: white; /* White icon color */
+  font-size: 20px; /* Icon size */
+  cursor: pointer; /* Pointer cursor */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-container {
+  position: relative;
+  width: 200px;
+}
+
+.dropdown-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Add this to your CSS file if necessary */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 500;
+}
+
+
+/* KPMG Button */
+.execute {
+  background-color: #1E49E2;
+  border: None;
+}
+.btn-outline-execute{
+  background-color: transparent;
+  color: #1E49E2;
+  border: none;
+}
+
+
+.btn-reset{
+  background-color: #E30276;
+  color:#fff;
+  border: none;
+}
+
+.btn-outline-reset{
+  background-color: transparent;
+  color: #E30276;
+  border: none;
+}
+
+
+.btn3{
+  background-color: #00d0ff;
+  color:#fff;
+  border: none;
+}
+
+.btn-outline-3{
+  background-color: transparent;
+  color: #00d0ff;
+  border: none;
+}
+
+.btn-outline-4{
+  background-color: transparent;
+  color: #00338D;
+  border: none;
+}
+
+.btn4{
+  background-color:#00338D;
+  color: #fff;
+  border: none;
+}
+
+.btn-outline-swal2-confirm{
+  background-color: transparent;
+  color: #510DBC;
+  border: none;
+}
+
+.btn-outline-swal2-cancel{
+  background-color: transparent;
+  color: #AB0D82;
+  border: none;
+}
+
+/* Dashboard Tabs */
+.nav-tabs .nav-link {
+  color: #0C233C !important;
+  border: none !important
+}
+
+/* Change hover effect */
+.nav-tabs .nav-link:hover {
+  background-color: #ebedef !important;
+  color: #0C233C !important; 
+}
+
+/* Active tab styles */
+.nav-tabs .nav-link.active {
+  color: #0C233C !important;
+  background-color: transparent !important; 
+  border-bottom: 3px solid #0C233C !important;
+}
+
+
+
+/* Swal Buttons */
+/* Change the background color of the confirmation button */
+.swal2-confirm {
+  background-color: #510DBC !important; /* Green */
+  color: white !important;
+  border: none !important;
+}
+
+.swal2-cancel {
+  background-color: #AB0D82 !important; /* Red */
+  color: white !important;
+  border: none !important;
+}
+
+/* Optional: Add hover effects */
+.swal2-confirm:hover {
+  background-color: #510DBC !important; /* Darker Green */
+}
+
+.swal2-cancel:hover {
+  background-color: #AB0D82 !important; /* Darker Red */
+}
+
+
+/* Sidebar  */
+.nav-item .nav-link {
+  color: #0C233C !important;
+  border: none !important
+}
+
+/* Change hover effect */
+.nav-link:hover {
+  background-color: #ebedef !important;
+  color: #0C233C !important; 
+}
+
+/* Active tab styles */
+.nav-link.active {
+  font-weight: bold;
+  color: #0a2542 !important;
+  /* background-color: #AB0D82 !important;  */
+  /* border-bottom: 3px solid #0C233C !important; */
+}
