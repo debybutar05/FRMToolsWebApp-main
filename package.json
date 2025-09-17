@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.9",
+    "@types/csurf": "^1.11.5"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "csurf": "^1.11.0",
+    "helmet": "^8.1.0"
+  }
+}

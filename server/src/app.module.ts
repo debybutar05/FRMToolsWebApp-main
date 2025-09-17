@@ -4,6 +4,8 @@ import { GroupsModule } from './groups/groups.module';
 import { EntitiesModule } from './entities/entities.module';
 import { Group } from './groups/entities/group.entity';
 import { EntityItem } from './entities/entities/entity.entity';
+import { AppController } from './app.controller';  // <-- tambahkan ini
+import { AppService } from './app.service';        // <-- tambahkan ini
 
 @Module({
   imports: [
@@ -18,7 +20,9 @@ import { EntityItem } from './entities/entities/entity.entity';
       synchronize: false,
     }),
     GroupsModule,
-    EntitiesModule, // <-- pastikan ada ini
+    EntitiesModule,
   ],
+  controllers: [AppController],  // <-- tambahkan ini
+  providers: [AppService],       // <-- tambahkan ini
 })
 export class AppModule {}
